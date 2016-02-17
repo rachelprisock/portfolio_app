@@ -5,10 +5,45 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,900italic|Amatic+SC' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
+<header class="container">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12 text-center jumbotron" style="padding: 15px;">
+				<h1 style="font-family: 'Playfair Display', serif; font-weight: 900;">Rachel Prisock</h1>
+				<h2 style="font-family: 'Amatic SC', cursive;">Developer &#x2022;	 Data Lover &#x2022;	 Future AI Creator</h2>
+
+			</div>
+		</div>
+		<div class="row container-fluid">
+			<nav class="col-md-12 nav navbar-default text-center jumbotron" style="padding: 5px; font-family: 'Playfair Display', serif; font-size: 2em; background-color: transparent;">
+          <ul class="nav navbar-nav col-md-12" style="padding: 10px;">
+          	<li class="col-md-4">Projects</li>
+            <li class="col-md-4">About Me</li>
+            <li class="col-md-4">Resume</li>
+          </ul>
+	    </nav>
+	  </div>
+	</div>
+
+  	
 <%= yield %>
+
+<footer class="container-fluid">
+  <div class="container-fluid">
+  	<div class="row">
+	    <nav class="col-md-12 nav navbar-default text-center jumbotron" style="padding: 5px; font-family: 'Amatic SC', cursive; font-size: 2em;">
+        <ul class="nav navbar-nav col-md-12">
+          <li class="col-md-6"><a href="https://www.linkedin.com/in/rachelprisock">LinkedIn</a></li>
+          <li class="col-md-6"><a href="https://github.com/rachelprisock">Github</a></li>
+        </ul>
+	    </nav>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
