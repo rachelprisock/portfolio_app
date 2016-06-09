@@ -1,38 +1,224 @@
-<div class="container">
-	<div class="col-md-6">
-		<h2><i class="fa fa-graduation-cap"></i>
-	 	Education</h2>
-			<h4>Data Science Course - General Assembly | Graduating: 2016</h4>
-			<h4>Back-End Web Development Course	 - General Assembly	| Graduated: 2015</h4>
-			<h4>B.A. Psychology - George Washington University | Graduated: 2014</h4>
-				<h5>GPA: 3.44</h5>
+<div class="container text-center">
+    <ul class="nav nav-tabs col-md-12 text-center" style="padding: 0px; font-size: 1.5em; border-bottom: transparent;">
+    	<li class="col-sm-4"><%= link_to 'Projects', projects_path, {:style=>'background-color:#e9ece5;  border-radius: 5px;'} %></li>
+      <li class="col-sm-4"><%= link_to 'About', about_path, {:style=>'background-color:#c0dfd9;  border-radius: 5px;'}%></li>
+      <li class="col-sm-4 active"><%= link_to 'Resume', resume_path, {:style=>'background-color:#a8b6bf;  border-radius: 5px;'} %></li>
+    </ul>
+</div>
+
+<!-- Full Resume -->
+<div class="container" style="background-color: #a8b6bf;  border-radius: 25px; color: #3B3A36; padding: 25px; padding-bottom: 50px;">
+	<div class="col-md-10 col-md-offset-1">
+
+		<!-- Education -->
+		<div style="padding: 15px">
+			<div class="col-md-12 text-center" style="padding: 15px; font-family: 'Pacifico', cursive;">
+				<h2><i class="fa fa-graduation-cap text-center"></i>Education</h2>
+			</div>
+
+			<!-- DS -->
+			<div style="padding: 10px;">
+				<div id="education" class="col-md-7" style="font-size: 1.25em;">
+					<b>Data Science Course</b>
+					<br>
+					<div style="font-size: .75em;">
+						<i>General Assembly</i>
+						Graduated: 2016
+					</div>
+				</div>
+				<div class="col-md-offset-3">
+					<p>Studied machine learning, scraping, python, prediction and analysis of large data sets.</p>
+				</div>
+			</div>
+
+			<!-- BEWD -->
+			<div style="padding: 10px;">
+				<div id="education" class="col-md-7" style="font-size: 1.25em;">
+					<b>Back-End Web Development Course</b>
+					<br>
+					<div style="font-size: .75em;">
+						<i>General Assembly</i>
+						Graduated: 2015
+					</div>
+				</div>
+				<div class="col-md-offset-3">
+					<p>Built and deployed Ruby on Rails applications and studied MVC, databases, routing, and APIs. </p>
+				</div>
+			</div>
+
+			<!-- GWU -->
+			<div style="padding: 10px;">
+				<div id="education" class="col-md-7" style="font-size: 1.25em;">
+					<b>B.A. Psychology</b>
+					<br>
+					<div style="font-size: .75em;">
+						<i>George Washington University</i>
+						Graduated: 2014
+					</div>
+				</div>
+				<div class="col-md-offset-3">
+					<p>GPA: 3.44 - Studied behavioral trends, neuroscience research, and statistical analysis.</p>
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- Experience -->
+		<div style="padding: 15px">
+			<div class="col-md-12 text-center" style="padding: 15px; font-family: 'Pacifico', cursive;">
+				<h2><i class="fa fa-briefcase text-center"></i>
+				 Experience</h2>
+			</div>
+
+			<!-- Junior Full Stack -->
+			<div style="padding: 10px;">
+				<div id="job-title" class="col-md-3" style="font-size: 1.25em;">
+					<b>Junior Full Stack Developer</b>
+					<br>
+					<div style="font-size: .75em;">
+						<i>ECMC Innovation Lab</i>
+						April 2016 - Present
+					</div>
+				</div>
+				<div class="col-md-offset-3">
+					<p>Built client-facing applications in Ruby on Rails and AngularJS to support collegeabacus.org.</p>
+					<p>Configured and managed AWS EC2 instances and PostgreSQL Amazon RDS databases.</p>
+					<p>Wrote tests with Rspec in an effort to maintain high quality code and bug free applications.</p>
+				</div>
+			</div>
+
+			<!-- QA -->
+			<div style="padding: 10px;"	>
+				<div id="job-title" class="col-md-3" style="font-size: 1.25em;">
+					<b>QA and Support Technician</b>
+					<br>
+					<div style="font-size: .75em;">
+						<i>ECMC Innovation Lab</i>
+						August 2015 - March 2016
+					</div>
+				</div>
+				<div class="col-md-offset-3">
+					<p>Built 2 client-side features with AngularJS and Ruby on Rails to expand ability to debug.</p>
+					<p>Documented processes for AngularJS application to train future members of the team.</p>
+					<p>Identified and tracked bugs by analyzing user feedback to optimize application functionality.</p>
+				</div>
+			</div>
+					
+			<!-- Intern -->
+			<div style="padding: 10px;"	>
+				<div id="job-title" class="col-md-3" style="font-size: 1.25em;">
+					<b>Product Development & Innovation Intern</b>
+					<br>
+					<div style="font-size: .75em;">
+						<i>ECMC Innovation Lab</i>
+						April - August 2015
+					</div>
+				</div>
+				<div class="col-md-offset-3">
+					<p>Programmatically added 5,000+ institutions to College Abacus to build application.</p>
+					<p>Trained 6 interns to programmatically add difficult university records to College Abacus.</p>
+					<p>Informed future development of application features to boost efficiency of school-adding procedures.</p>
+				</div>
+			</div>		
+
+			<!-- Brown -->
+			<div style="padding: 10px;"	>
+				<div id="job-title" class="col-md-3" style="font-size: 1.25em;">
+					<b>Neuroscience Research Assistant</b>
+					<br>
+					<div style="font-size: .75em;">
+							<i>Brown University</i>
+							June - December 2014
+					</div>
+				</div>
+				<div class="col-md-offset-3">					
+					<p>Researched the effects of meditation on depression.</p>
+					<p>Gathered, entered, and analyzed data to further the findings of the study.</p>
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- Skills -->
+		<div style="padding: 15px">
+			<div class="text-center col-md-12" style="padding: 15px; font-family: 'Pacifico', cursive;">
+				<h2><i class="fa fa-keyboard-o text-center"></i>
+				Skills</h2>
+			</div>
+
+			<!-- Languages and Frameworks -->
+			<div class="col-md-12" style="padding: 10px;">
+				<div id="skills" class="col-md-5" style="font-size: 1.5em;  font-family: 'Pacifico', cursive;">
+					<b>Languages & Frameworks:</b>
+				</div>
+				<div style="font-size: 1.25em;">
+					<ul>
+						<div class="col-md-3" style="margin-left: -20px;">
+							<i class="fa fa-diamond"></i> Ruby on Rails
+							<br>
+							<span class="glyphicon glyphicon-minus"></span> Python
+							<br>
+							<span class="glyphicon glyphicon-minus"></span> Javascript
+							<br>
+						</div>
+						<div class="col-md-3 col-md-offset-1">
+							<span class="glyphicon glyphicon-minus"></span> SQL
+							<br>
+							<span class="glyphicon glyphicon-minus"></span> Bootstrap
+							<br>
+							<span class="glyphicon glyphicon-minus"></span> AngularJS
+							<br>
+						</div>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Testing -->
+			<div class="col-md-12" style="padding: 10px;">
+				<div id="skills" class="col-md-5" style="font-size: 1.5em;">
+					<b>Testing & Analytics:</b>
+				</div>
+				<div style="font-size: 1.25em;">
+					<ul>
+						<div class="col-md-3" style="margin-left: -20px;">
+							<span class="glyphicon glyphicon-minus"></span> Rspec
+							<br>
+							<span class="glyphicon glyphicon-minus"></span> Capybara
+							<br>
+							<span class="glyphicon glyphicon-minus"></span> Selenium
+							<br>
+						</div>
+						<div class="col-md-3 col-md-offset-1">
+							<span class="glyphicon glyphicon-minus"></span> FactoryGirl
+							<br>
+							<span class="glyphicon glyphicon-minus"></span> PhantomJS
+							<br>
+							<span class="glyphicon glyphicon-minus"></span> New Relic
+							<br>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<!-- Databases -->
+			<div class="col-md-12" style="padding: 10px;">
+				<div id="skills" class="col-md-5" style="font-size: 1.5em;">
+					<b>Databases:</b>
+				</div>
+				<div style="font-size: 1.25em;">
+					<ul>
+						<div class="col-md-3" style="margin-left: -20px;">
+							<span class="glyphicon glyphicon-minus"></span> PostgreSQL
+							<br>
+						</div>
+						<div class="col-md-3 col-md-offset-1">
+							<span class="glyphicon glyphicon-minus"></span> MySQL
+							<br>
+						</div>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+			
 	</div>
-	<div class="col-md-6">
-		<h2><i class="fa fa-keyboard-o"></i>
-		Skills</h2>
-			<h4>Languages & Frameworks:</h4>
-				<p>Ruby on Rails, JavaScript, Python, SQL, Bootstrap, AngularJS</p>
-			<h4>Testing:</h4> 
-				<p>CapybaraPoltergeist, PhantomJS</p>
-			<h4>Databases:</h4>
-				<p>PostgreSQL, MySQL</p>		
-	</div>		
-	<div class="col-md-12">
-		<h2><i class="fa fa-briefcase"></i>
-		 Experience</h2>
-			<h4>User Support Technician | ECMC Innovation Lab | August 2015 - Present</h4>
-				<p>Built 2 client-side features with AngularJS and Ruby on Rails to expand ability to debug.
-				Documented processes for AngularJS application to train future members of the team.
-				Identified and tracked bugs by analyzing user feedback to optimize application functionality.</p>
-			<h4>Product Development and Innovation Intern | ECMC Innovation Lab | April - August 2015
-			</h4>						
-				<p>Programmatically added 5,000+ institutions to College Abacus to build application.
-				Trained 6 interns to programmatically add difficult university records to College Abacus.
-				Informed future development of application features to boost efficiency of school-adding procedures.</p>
-			<h4>Neuroscience Research Assistant	| Brown University: Cognitive and Affective Neuroscience Lab | June - December 2014
-			</h4>						
-				<p>Researched the effects of meditation on depression.
-				Gathered, entered, and analyzed data to further the findings of the study.</p>		
-	</div>
-	
 </div>

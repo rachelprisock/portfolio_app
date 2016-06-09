@@ -4,14 +4,10 @@ class DirectoriesController < ApplicationController
 	end
 
 	def about
-
+		@image = "rachel_face.jpg"
 	end
 
 	def resume
-
-	end
-
-	def blog
 
 	end
 end

@@ -1,0 +1,6 @@
+/* line 1, /Users/rachelprisock/dev/portfolio_app/app/assets/stylesheets/base/headers.scss */
+circle-container {
+  border-radius: 50%;
+  width: 1000px;
+  height: 1000px;
+}
