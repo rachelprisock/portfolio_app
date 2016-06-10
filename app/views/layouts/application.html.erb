@@ -7,26 +7,44 @@
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag 'base/headers' %>
   <link rel="stylesheet" type="text/css" href="application.css.sass">
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.css">
+  <link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700|Pacifico' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <style>
+  body {
+    background-image: url("assets/woodgrain.jpg");
+    background-repeat: repeat;
+
+  }
+
+  </style>
 </head>
-<body class="container" style="background-color: #3B3A36;">
-
-<header>
-    <div id="circle-container" style="color: white;">
-      <p> Logo </p>
+  <body>
+    
+    
+    <div class="container" style="padding-top: 15px;">
+      <header>
+        <div class= "text-center" style="margin-top: 110px; margin-left: 860px; z-index: 1; position: absolute;">
+          <%= image_tag("rp_logo3.png", height: 75, width: 75, :class => "logo-container") %>
+        </div>
+      </header>
+      <div class="main-content">
+        <div class="container text-center">
+            <ul class="nav nav-tabs col-md-12 text-center" style=" font-size: 25px; border-bottom: transparent; margin: 1px;  font-family: 'Pacifico', cursive; padding-top: 30px;">
+              <li class="col-md-4"><%= link_to 'My Projects', projects_path, {:style=>'background-color:#67bfe4; padding: 10px;'} %></li>
+              <li class="col-md-4"><%= link_to 'About Me!', about_path, {:style=>'background-color:#f3f4f0;'}%></li>
+              <li class="col-md-4"><%= link_to 'Resume', resume_path, {:style=>'background-color:#52e0bd;'} %></li>
+            </ul>
+        </div>	
+        <%= yield %>
+      </div>
+      <footer class="container">
+          <nav class="text-center" style="font-size: 2em; padding: 20px;">
+            <a style="padding: 10px;" href="http://linkedin.com/in/rachelprisock"><i class="fa fa-linkedin-square"></i></a>
+            <a style="padding: 10px;" href="https://github.com/rachelprisock"><i class="fa fa-github-square"></i></a>
+            <a style="padding: 10px;" href="http://google.com"><i class="fa fa-envelope"></i></a>
+          </nav>
+      </footer>
     </div>
-</header>
-  	
-<%= yield %>
-
-<footer class="container">
-    <nav class="text-center" style="font-size: 2em; padding: 20px;">
-      <a style="padding: 10px;" href="http://linkedin.com/in/rachelprisock"><i class="fa fa-linkedin-square"></i></a>
-      <a style="padding: 10px;" href="https://github.com/rachelprisock"><i class="fa fa-github-square"></i></a>
-      <a style="padding: 10px;" href="http://google.com"><i class="fa fa-envelope"></i></a>
-    </nav>
-</footer>
-
-</body>
+  </body>
 </html>

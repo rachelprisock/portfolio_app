@@ -1,49 +1,49 @@
-<div class="container text-center">
-    <ul class="nav nav-tabs col-md-12 text-center" style="padding: 0px; font-size: 1.5em; border-bottom: transparent; ">
-    	<li class="col-sm-4 active"><%= link_to 'Projects', projects_path, {:style=>'background-color:#e9ece5;  border-radius: 5px;'}%></li>
-      <li class="col-sm-4"><%= link_to 'About', about_path, {:style=>'background-color:#c0dfd9;  border-radius: 5px;'}%></li>
-      <li class="col-sm-4"><%= link_to 'Resume', resume_path, {:style=>'background-color:#b3c2bf;  border-radius: 5px;'} %></li>
-    </ul>
-</div>
-
-<div class="container" style="background-color: #e9ece5;  border-radius: 25px; color: #3B3A36; padding: 25px; padding-bottom: 50px;">
-	<div class="col-sm-12">
-		<div style="padding: 15px;">
-			<div class="text-center"> 
-				<h2><i class="fa fa-delicious" aria-hidden="true"></i> Crossword Solver</h2>
-				<a style="padding: 10px;" href="https://github.com/rachelprisock/crossword_solver">The Code</a>
-				<a style="padding: 10px;" href="https://docs.google.com/presentation/d/1e-6dPDONeI1yQXDtMf3PQqSX4akI9ZGOIKq6ur5dYA8/edit?usp=sharing">Project Proposal</a>
-				<a style="padding: 10px;" href="https://docs.google.com/presentation/d/17qyRA3uS26uBDEkWsVZoVuwkd8VKJqWyQD7FXrlUq2k/edit?usp=sharing">Final Presentation</a>
+<div class="container" style="background-color: #67bfe4;  border-radius: 25px; color: #3B3A36; padding: 25px; padding-bottom: 50px;">
+	<div class="col-md-12">
+		<!-- Crossword Solver -->
+		<div  style="padding-bottom: 25px">
+			<div div class="col-md-12 text-center" style="padding: 15px; font-family: 'Pacifico', cursive; font-size: 40px;"> 
+				<b><i class="fa fa-delicious" aria-hidden="true"></i> Crossword Solver</b>
 			</div>
-			
-			<div class="col-md-10 col-md-offset-1">
-				<p><h4>Description:</h4> I am building a crossword puzzle solver. In order to do this, my program takes advantage of the structure of modular neural networks in order to get the correct answer to crossword clues.</p>
+			<div style="font-family: 'Arimo', sans-serif;">
+				<div class="text-center" style="padding: 25px;">
+					<a style="padding: 10px;" href="https://github.com/rachelprisock/crossword_solver">The Code</a>
+					<a style="padding: 10px;" href="https://docs.google.com/presentation/d/1e-6dPDONeI1yQXDtMf3PQqSX4akI9ZGOIKq6ur5dYA8/edit?usp=sharing">Project Proposal</a>
+					<a style="padding: 10px;" href="https://docs.google.com/presentation/d/17qyRA3uS26uBDEkWsVZoVuwkd8VKJqWyQD7FXrlUq2k/edit?usp=sharing">Final Presentation</a>
+				</div>
+				
+				<div class="col-md-12">
+					<p><h4>Description:</h4> I am building a crossword puzzle solver. In order to do this, my program takes advantage of the structure of modular neural networks in order to get the correct answer to crossword clues.</p>
 
-				<p><h4>Database:</h4> First, I parsed through Xwordinfo's NY Times crossword puzzle xml links to gather all clue-answer pairs from all recorded crossword puzzles, dating from 1946 to 2015. Due to the enormous amount of computing power needed to parse through that kind of data, I only pulled a small sample of 100 crossword puzzles (which gave me about 65,000 rows of clue-answer pairs) in order to test the program. Upon being able to pull all of the data using a separate, stronger machine, I will store all clue-answer pairs in a relational mySQL database.</p>
+					<p><h4>Database:</h4> First, I parsed through Xwordinfo's NY Times crossword puzzle xml links to gather all clue-answer pairs from all recorded crossword puzzles, dating from 1946 to 2015. Due to the enormous amount of computing power needed to parse through that kind of data, I only pulled a small sample of 100 crossword puzzles (which gave me about 65,000 rows of clue-answer pairs) in order to test the program. Upon being able to pull all of the data using a separate, stronger machine, I will store all clue-answer pairs in a relational mySQL database.</p>
 
-				<p><h4>Puzzle Splitter:</h4> The next step was to break apart test puzzles. Using 2016 NY Times crosswords in .puz file format and Python's Crossword library, I pulled apart a dataframe of clues and their corresponding answer-lengths that gets sent to each of the modules (DB and dictionary.com's crossword solver). Another dataframe of clues, answer-length, and answers is sent to the checking portion of the program to check if predicted answers are correct.</p>
+					<p><h4>Puzzle Splitter:</h4> The next step was to break apart test puzzles. Using 2016 NY Times crosswords in .puz file format and Python's Crossword library, I pulled apart a dataframe of clues and their corresponding answer-lengths that gets sent to each of the modules (DB and dictionary.com's crossword solver). Another dataframe of clues, answer-length, and answers is sent to the checking portion of the program to check if predicted answers are correct.</p>
 
-				<p><h4>DB Module:</h4>  This module takes in the Pandas Dataframe from the puzzle splitter, cross checks these clues and answer lengths with those clue-answer pairs in the crossword db. This sends a dataframe of clues and possible candidates as well as their probability to the list compiler</p>
+					<p><h4>DB Module:</h4>  This module takes in the Pandas Dataframe from the puzzle splitter, cross checks these clues and answer lengths with those clue-answer pairs in the crossword db. This sends a dataframe of clues and possible candidates as well as their probability to the list compiler</p>
 
-				<p><h4>Dictionary.com Module:</h4> This module take in the dataframe from the puzzle splitter as well and for each clue and answer length, queries the dictinary.com page and scrapes the resulting possible answers and their probability, as defined by dictionary.com. This also sends a dataframe of clues and possible candidates and their probability to the list compiler.</p>
+					<p><h4>Dictionary.com Module:</h4> This module take in the dataframe from the puzzle splitter as well and for each clue and answer length, queries the dictinary.com page and scrapes the resulting possible answers and their probability, as defined by dictionary.com. This also sends a dataframe of clues and possible candidates and their probability to the list compiler.</p>
 
-				<p><h4>List Compiler:</h4>  The list compiler takes in both candidate lists and probability from the separate modules and combines ordered by highest probability. The highest probability answer is taken from this and sent as the single potential answer to the accuracy checker. If two probabilities are tied, I choose the higher probability from the crossword DB I created.</p>
+					<p><h4>List Compiler:</h4>  The list compiler takes in both candidate lists and probability from the separate modules and combines ordered by highest probability. The highest probability answer is taken from this and sent as the single potential answer to the accuracy checker. If two probabilities are tied, I choose the higher probability from the crossword DB I created.</p>
 
-				<p><h4>Accuracy Checker:</h4>  The accuracy checker checks the answers against the dataframe of clue-solution pairs sent from the puzzle splitter and checks the answer. So far the answers have been incredibly accurate, gaining over 90% accurate even with a small sample of 65,000 clue-answer pairs.</p>
+					<p><h4>Accuracy Checker:</h4>  The accuracy checker checks the answers against the dataframe of clue-solution pairs sent from the puzzle splitter and checks the answer. So far the answers have been incredibly accurate, gaining over 90% accurate even with a small sample of 65,000 clue-answer pairs.</p>
 
-				<p><h4>Future Work:</h4> I hope to take into account across-down relationships in order to gain better accuracy, which would require another portion of the program. I also hope to use the NLTK Python library in order to gather more insights about crossword clues and answers and their nuances. On top of this I would like to build a user-facing interface so that users can upload their own .puz files and see how accurate my program is. .Puz files can be found through the New York Times puzzle archive.</p>
-			</div>
-			
+					<p><h4>Future Work:</h4> I hope to take into account across-down relationships in order to gain better accuracy, which would require another portion of the program. I also hope to use the NLTK Python library in order to gather more insights about crossword clues and answers and their nuances. On top of this I would like to build a user-facing interface so that users can upload their own .puz files and see how accurate my program is. .Puz files can be found through the New York Times puzzle archive.</p>
+				</div>
+			</div>	
 		</div>
 
-		<div style="padding: 15px;">
-			<div class="col-md-12 text-center" style="padding-bottom: 0px; padding-top: 50px;">
-				<h2><i class="fa fa-gamepad" aria-hidden="true"></i>Game Review App</h2>
-				<p><a href="http://gamereviewapp.herokuapp.com">Check it out</a></p>
+		<div style="padding-bottom: 25px">
+			<div div class="col-md-12 text-center" style="padding: 15px; font-family: 'Pacifico', cursive; font-size: 40px;"> 
+				<b><i class="fa fa-gamepad" aria-hidden="true"></i> Game Review App</b>
 			</div>
-			<div class="col-md-10 col-md-offset-1">
-				<h4>Description:</h4>
-				<p> I created this application for my final project of Back-End Web Development at General Assembly. I created a place where users can play in browser games and review them. The user must sign in in order to create a review. Through this I learned how to work with the Devise gem, built a RoR application, work with Bootstrap and how to host game files in an iframe. I built this application in hopes to create my own Javascript or Python in browser games to fill the spaces of these original games.</p>
+			<div style="font-family: 'Arimo', sans-serif;">
+				<div class="text-center" style="padding: 10px;">
+					<p><a href="http://gamereviewapp.herokuapp.com">Check it out</a></p>
+				</div>
+				<div class="col-md-12">
+					<h4>Description:</h4>
+					<p> I created this application for my final project of Back-End Web Development at General Assembly. I created a place where users can play in browser games and review them. The user must sign in in order to create a review. Through this I learned how to work with the Devise gem, built a RoR application, work with Bootstrap and how to host game files in an iframe. I built this application in hopes to create my own Javascript or Python in browser games to fill the spaces of these original games.</p>
+				</div>
 			</div>
 			
 		</div>

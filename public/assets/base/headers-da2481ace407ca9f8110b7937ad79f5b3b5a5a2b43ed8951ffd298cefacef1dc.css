@@ -1,0 +1,27 @@
+/* line 1, /Users/rachelprisock/dev/portfolio_app/app/assets/stylesheets/base/headers.scss */
+a:link {
+  color: #3B3A36;
+  font-weight: bold;
+}
+
+/* line 5, /Users/rachelprisock/dev/portfolio_app/app/assets/stylesheets/base/headers.scss */
+a:visited {
+  color: #3B3A36;
+}
+
+/* line 8, /Users/rachelprisock/dev/portfolio_app/app/assets/stylesheets/base/headers.scss */
+a:hover {
+  font-weight: normal;
+}
+
+/* line 11, /Users/rachelprisock/dev/portfolio_app/app/assets/stylesheets/base/headers.scss */
+.img_circle {
+  border-radius: 10%;
+  margin: 20px;
+}
+
+/* line 15, /Users/rachelprisock/dev/portfolio_app/app/assets/stylesheets/base/headers.scss */
+circle-container {
+  border-radius: 50%;
+  border: 1px solid;
+}

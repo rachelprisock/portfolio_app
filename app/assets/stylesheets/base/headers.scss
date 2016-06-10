@@ -1,5 +1,7 @@
+
 a:link {
 	color: #3B3A36;
+	font-weight: normal;
 }
 a:visited {
 	 color: #3B3A36;
@@ -8,10 +10,7 @@ a:hover {
 	font-weight: bold; 
 	}
 .img_circle {
-	border-radius: 25%;
+	border-radius: 10%;
 	margin: 20px;	
 }
-circle-container {
-	border-radius: 50%;
-	border: 1px solid;
-}
+

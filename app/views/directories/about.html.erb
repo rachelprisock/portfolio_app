@@ -1,47 +1,36 @@
-<div class="container text-center">
-    <ul class="nav nav-tabs col-md-12 text-center" style="padding: 0px; font-size: 1.5em; border-bottom: transparent;">
-    	<li class="col-sm-4"><%= link_to 'Projects', projects_path, {:style=>'background-color:#e9ece5;  border-radius: 5px;'} %></li>
-      <li class="col-sm-4 active"><%= link_to 'About', about_path, {:style=>'background-color:#c0dfd9; border-radius: 5px;'}%></li>
-      <li class="col-sm-4"><%= link_to 'Resume', resume_path, {:style=>'background-color:#a8b6bf;  border-radius: 5px;'} %></li>
-    </ul>
-</div>
-
-<div class="container" style="background-color: #c0dfd9; border-radius: 25px; color: #3B3A36; padding: 25px; padding-bottom: 50px;">
-	<div class="col-md-10 col-md-offset-1">
-
+<div class="container" style="background-color: #f3f4f0; border-radius: 25px; color: #3B3A36; padding: 25px; padding-bottom: 50px;">
+	<div class="col-md-12">
+<!-- 		<div class="col-md-12 text-left" style="padding-top: 30px;">
+			
+		</div> -->
 		<!-- About Me -->
 		<div style="padding: 15px;">
-			<div class="col-md-12 text-center" style="padding: 15px; padding-bottom: 40px; font-family: 'Pacifico', cursive; font-size: 45px;">
-				<b>I am Rachel Prisock </b>
+			<!-- Header -->
+			<div class="col-md-12 text-center" style=" font-family: 'Pacifico', cursive; font-size: 45px; padding-bottom: 5px;">
+				<b>I am Rachel Prisock</b>
 			</div>
-
-			<!-- Me -->
-			<div class="col-md-6" style="padding: 10px;">
-				<div style="font-size: 1.25em;">
-					<p><b>I am a Junior Full Stack Developer with an affinity for Ruby on Rails and Python</b></p>
-					<ul style="list-style-type: circle;">
-						<li>I am an <b>avid learner</b>, everyday I strive to learn something new</li>
-						<li>I <b>love</b> puzzles, give me any puzzle and I will sit still until I come to a solution <i>(much like my coding style)</i></li>
-					</ul>
-				</div>
-				<div style="font-size: 1.25em;">
-					<p><b>I'm passionate about:</b></p>
-					<ul style="list-style-type: circle;">
-						<li>Mentorship & teaching others about computer science</li>
-						<li>Building clever & intelligent applications</li>
-					</ul>
-					<br>
-				</div>
-			</div>
-			<div class="col-md-6" style="padding:10px;">
-				<div class="col-md-5 col-md-offset-1">
+			<!-- Image -->
+			<div class="col-md-6 text-center">
+				<div>
 					<div>
 						<%= image_tag(@image, height: 300, width: 300, :class => "img_circle") %>
 					</div>
 				</div>
 			</div>
+			<!-- Text -->
+			<div style="font-family: 'Arimo', sans-serif;">
+				<div class="col-md-6" style="font-size: 20px;">
+					<div style="padding-bottom: 5px; font-size: 17px; padding-top: 15px;">
+						<p><b>Junior Full Stack Developer</b> with a strong knowledge of Ruby on Rails and Python.</p>
+						<p>An <b>avid learner,</b> striving to learn something new everyday.</p>
+						<p>A diehard <b>puzzle lover.</b> Give me a puzzle and I will sit still until I come to a solution - <i>much like my coding style</i></p>
+						<p><b>I'm passionate about</b> mentorship & teaching others about computer science</p>
+						<p><b>Devoted to building</b> data and test driven applications</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
-<!-- <div class="container text-center"><h3 style="font-family: 'Amatic SC',cursive;">Developer &#x2022;  Data Lover &#x2022;   Future AI Creator</h3></div> -->
 		
