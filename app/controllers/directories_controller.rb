@@ -10,4 +10,12 @@ class DirectoriesController < ApplicationController
 	def resume
 
 	end
+
+	def download_pdf
+ 		send_file(
+	    "#{Rails.root}/public/website_resume.pdf",
+	    filename: "rachel_prisock_resume.pdf",
+	    type: "application/pdf"
+	  )
+	end
 end

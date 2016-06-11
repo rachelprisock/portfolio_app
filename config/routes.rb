@@ -8,6 +8,8 @@ root 'directories#about'
 get '/projects' => 'directories#projects'
 get '/about' => 'directories#about'
 get '/resume' => 'directories#resume'
+get 'directories/download_pdf'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
